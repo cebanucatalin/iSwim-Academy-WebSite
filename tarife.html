@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iSwim Academy - Tarife și Abonamente</title>
+  <script src="Tarife/tailwindcss.js"></script>
+  <script src="Tarife/iconify-icon.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" type="text/css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" type="text/css" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Nunito", ui-sans-serif, system-ui, -apple-system, sans-serif;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #FFFFFF;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #000000;
+    }
+
+    p, span, div, table {
+      font-family: "Nunito", ui-sans-serif, system-ui, sans-serif;
+    }
+
+    .font-manrope { font-family: "Manrope", sans-serif; }
+    .font-inter { font-family: "Inter", sans-serif; }
+
+    * { transition: all 0.2s ease; }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    .pricing-table th {
+      background-color: rgba(195, 198, 214, 0.5);
+      padding: 1.5rem 2rem;
+      text-align: left;
+      font-weight: 700;
+      font-size: 1.25rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    }
+
+    .pricing-table td {
+      padding: 1.5rem 2rem;
+      font-size: 1.125rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    }
+
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .highlight-row {
+      background-color: rgba(0, 64, 161, 0.1);
+    }
+    
+    .highlight-row-orange {
+      background-color: rgba(164, 60, 18, 0.1);
+    }
+
+    .text-accent { color: #0040A1; }
+    .text-warning { color: #A43C12; }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px) rotate(var(--tw-rotate, 0deg)); }
+      50% { transform: translateY(-15px) rotate(var(--tw-rotate, 0deg)); }
+      100% { transform: translateY(0px) rotate(var(--tw-rotate, 0deg)); }
+    }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="absolute top-6 left-0 right-0 z-50 px-4 md:px-10 lg:px-20">
+    <nav class="max-w-[1390px] mx-auto bg-white border border-[#0040A1] rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
+      <div class="flex items-center gap-3">
+        <a href="index.html"><img src="Acasa/assets/logo.svg" alt="iSwim Logo" class="h-10 w-auto object-contain"></a>
+        <a href="index.html"><span class="text-[#0040A1] font-[Nunito] text-2xl font-black">iSwim</span></a>
+      </div>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Acasă</a>
+        <a href="servicii.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Servicii</a>
+        <a href="tarife.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Tarife</a>
+        <a href="contacte.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Contacte</a>
+      </div>
+
+        <button class="bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
+          <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0"> Contactează-ne</a>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative min-h-[1000px] bg-[#0040A1]/15 flex flex-col items-center justify-center pt-32 pb-20 px-4 border-b-2 border-accent overflow-hidden">
+    <!-- Floating Elements -->
+    <div class="absolute top-[40%] left-[5%] lg:left-[10%] opacity-35 animate-float" style="--tw-rotate: -21deg;">
+      <img src="Tarife/assets/IMG_1.webp" alt="Piggy Bank" class="w-48 h-48 lg:w-64 lg:h-64 object-contain">
+    </div>
+    <div class="absolute top-[40%] right-[5%] lg:right-[10%] opacity-35 animate-float" style="--tw-rotate: 17deg;">
+      <img src="Tarife/assets/IMG_2.webp" alt="Gold Coin" class="w-56 h-56 lg:w-72 lg:h-72 object-contain">
+    </div>
+
+    <div class="z-10 text-center max-w-4xl">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+        Ghidul tău de<br>
+        <span class="text-accent">Abonamente și Lecții</span>
+      </h1>
+      <p class="text-lg md:text-xl font-medium text-gray-800 max-w-3xl mx-auto mb-24">
+        Descoperă tarifele și abonamentele iSwim Academy, create pentru a se potrivi nevoilor fiecărui copil. Alege varianta potrivită și începe călătoria spre încredere și performanță.
+      </p>
+      
+      <div class="flex flex-col items-center gap-2 text-sm font-normal text-gray-600 animate-bounce">
+        <span>SCROLEAZĂ ÎN JOS</span>
+        <iconify-icon icon="lucide:chevron-down" width="24"></iconify-icon>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Tables Section -->
+  <main class="max-w-[1440px] mx-auto px-4 lg:px-20 py-24 space-y-32">
+    
+    <!-- Table 1: Fara Transport -->
+    <section>
+      <div class="flex items-center gap-4 mb-10">
+        <img src="Tarife/assets/IMG_4.svg" alt="Icon" class="w-12 h-12">
+        <h2 class="text-3xl md:text-4xl">Abonamente fără transport</h2>
+      </div>
+      
+      <div class="overflow-x-auto">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Nr. Luni</th>
+              <th>Preț<br><span class="text-base font-normal">2 frecvențe / săpt.</span></th>
+              <th>Preț<br><span class="text-base font-normal">3 frecvențe / săpt.</span></th>
+              <th>Preț<br><span class="text-base font-normal">4 frecvențe / săpt.</span></th>
+              <th class="text-warning">Preț<br><span class="text-base font-normal">1 frecvență / săpt.</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-medium">1 lună</td>
+              <td>2.700lei</td>
+              <td>4.000lei</td>
+              <td>5.300lei</td>
+              <td class="text-warning font-medium">1.450lei</td>
+            </tr>
+            <tr class="highlight-row">
+              <td class="font-semibold text-accent">6 luni</td>
+              <td>14.400lei</td>
+              <td>21.300lei</td>
+              <td>28.200lei</td>
+              <td class="text-warning font-medium">8.100lei</td>
+            </tr>
+            <tr>
+              <td class="font-medium">9 luni</td>
+              <td>20.700lei</td>
+              <td>31.000lei</td>
+              <td>40.500lei</td>
+              <td class="text-warning font-medium">11.250lei</td>
+            </tr>
+            <tr>
+              <td class="font-medium">11 luni</td>
+              <td>24.200lei</td>
+              <td>35.750lei</td>
+              <td>47.300lei</td>
+              <td class="text-warning font-medium">12.650lei</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Table 2: Cu Transport -->
+    <section>
+      <div class="flex items-center gap-4 mb-10">
+        <img src="Tarife/assets/IMG_5.svg" alt="Icon" class="w-12 h-12">
+        <h2 class="text-3xl md:text-4xl">Abonamente cu transport</h2>
+      </div>
+      
+      <div class="overflow-x-auto">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Nr. Luni</th>
+              <th>Preț<br><span class="text-base font-normal">2 frecvențe / săpt.</span></th>
+              <th>Preț / lună<br><span class="text-base font-normal">2 frecvențe</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="font-medium">1 lună</td>
+              <td>3.700lei</td>
+              <td>3.700lei</td>
+            </tr>
+            <tr class="highlight-row-orange">
+              <td class="font-semibold text-warning">6 luni</td>
+              <td>20.400lei</td>
+              <td>3.400lei</td>
+            </tr>
+            <tr>
+              <td class="font-medium">9 luni</td>
+              <td>29.700lei</td>
+              <td>3.300lei</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Split & Individual Training -->
+    <section class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <!-- Split Training -->
+      <div class="bg-accent/10 border border-accent/70 rounded-[35px] p-8 md:p-10">
+        <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+          <h3 class="text-3xl text-accent">Antrenamente Split</h3>
+        </div>
+        <p class="text-gray-600 text-xl font-medium mb-10">Pentru 2 sau mai mulți copii</p>
+        
+        <div class="space-y-6">
+          <div class="grid grid-cols-4 text-gray-600 font-medium pb-2 border-b border-black/50">
+            <span>Nr. Șed.</span>
+            <span>Split 2</span>
+            <span>Split 3</span>
+            <span>Split 4</span>
+          </div>
+          <div class="grid grid-cols-4 text-gray-600 font-bold pb-2 border-b border-black/50">
+            <span>1</span>
+            <span class="font-normal">500lei</span>
+            <span class="font-normal">450lei</span>
+            <span class="font-normal">400lei</span>
+          </div>
+          <div class="grid grid-cols-4 text-gray-600 font-bold pb-2 border-b border-black/50">
+            <span>5</span>
+            <span class="font-normal">2.500lei</span>
+            <span class="font-normal">2.250lei</span>
+            <span class="font-normal">2.000lei</span>
+          </div>
+          <div class="grid grid-cols-4 text-gray-600 font-bold pb-2">
+            <span>10</span>
+            <span class="font-normal">5.000lei</span>
+            <span class="font-normal">4.500lei</span>
+            <span class="font-normal">4.000lei</span>
+          </div>
+        </div>
+
+        <div class="mt-12 bg-white border border-black/50 rounded-xl p-4 flex items-center gap-4">
+          <img src="Tarife/assets/IMG_6.svg" alt="Group" class="w-8 h-8">
+          <p class="text-xl font-inter">
+            <span class="font-normal">Lecție de grup: </span>
+            <span class="text-accent font-bold">350lei</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Individual Training -->
+      <div class="bg-white border border-gray-400 rounded-[35px] p-8 md:p-10">
+        <h3 class="text-3xl mb-4 pb-4 border-b border-black/50">Antrenamente individuale</h3>
+        
+        <div class="mb-10">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-warning text-xl">L - V 14:00 - 21:00</span>
+            <span class="text-gray-500">Preț total</span>
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="bg-gray-200 rounded-2xl p-4 text-center">
+              <span class="block text-sm font-manrope font-light">1 Șed.</span>
+              <span class="text-xl font-manrope font-bold">850lei</span>
+            </div>
+            <div class="bg-gray-200 rounded-2xl p-4 text-center">
+              <span class="block text-sm font-manrope font-light">5 Șed.</span>
+              <span class="text-xl font-manrope font-bold">4.250lei</span>
+            </div>
+            <div class="bg-gray-200 rounded-2xl p-4 text-center">
+              <span class="block text-sm font-manrope font-light">10 Șed.</span>
+              <span class="text-xl font-manrope font-bold">8.500lei</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-10">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-accent text-xl">L - V 09:00 - 14:00</span>
+            <span class="text-gray-500">Preț total</span>
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="bg-gray-200 rounded-2xl p-4 text-center">
+              <span class="block text-sm font-manrope font-light">1 Șed.</span>
+              <span class="text-xl font-manrope font-bold">700lei</span>
+            </div>
+            <div class="bg-gray-200 rounded-2xl p-4 text-center">
+              <span class="block text-sm font-manrope font-light">5 Șed.</span>
+              <span class="text-xl font-manrope font-bold">3.500lei</span>
+            </div>
+            <div class="bg-gray-200 rounded-2xl p-4 text-center">
+              <span class="block text-sm font-manrope font-light">10 Șed.</span>
+              <span class="text-xl font-manrope font-bold">7.000lei</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-6 border-t border-black/50 flex justify-between items-center">
+          <span class="text-gray-600 text-xl">Lecție de probă (în grup):</span>
+          <span class="text-accent text-xl font-bold">450lei</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="flex flex-col lg:flex-row items-center gap-16 py-10">
+      <div class="flex-1 space-y-12">
+        <h2 class="text-5xl lg:text-6xl leading-tight">
+          Ce primești cu<br>
+          <span class="text-accent">Fiecare<br>Abonament</span>
+        </h2>
+        
+        <div class="space-y-10">
+          <div class="flex gap-6">
+            <img src="Tarife/assets/IMG_8.svg" alt="Safety" class="w-16 h-16 shrink-0">
+            <div>
+              <h4 class="text-2xl font-semibold mb-2">Siguranță de top</h4>
+              <p class="text-xl text-gray-600 font-semibold">Punem siguranța copiilor pe primul loc, prin supraveghere atentă.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-6">
+            <img src="Tarife/assets/IMG_9.svg" alt="Coaches" class="w-16 h-16 shrink-0">
+            <div>
+              <h4 class="text-2xl font-semibold mb-2">Antrenori Calificați</h4>
+              <p class="text-xl text-gray-600 font-semibold">Lecțiile sunt susținute de instructori experimentați și dedicați siguranței.</p>
+            </div>
+          </div>
+          
+          <div class="flex gap-6">
+            <img src="Tarife/assets/IMG_10.svg" alt="Progress" class="w-16 h-16 shrink-0">
+            <div>
+              <h4 class="text-2xl font-semibold mb-2">Monitorizarea Progresului</h4>
+              <p class="text-xl text-gray-600 font-semibold">Urmărim evoluția fiecărui copil și adaptăm exercițiile în funcție de nivelul său.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="flex-1 relative">
+        <div class="rounded-[100px] overflow-hidden rotate-2 shadow-2xl">
+          <img src="Tarife/assets/fata.svg" alt="Happy Swimmer" class="w-full h-auto object-cover">
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+  <section class="py-20 px-4">
+    <div class="max-w-6xl mx-auto bg-[#0040A1] rounded-[50px] p-12 md:p-20 text-center text-white">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 !text-white">Gata să începi?</h2>
+      <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-90">
+        Rezervă acum o lecție de probă și află care este cel mai bun punct de pornire pentru micul tău înotător.
+      </p>
+      
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <button class="bg-white text-[#0040A1] px-8 py-4 rounded-full font-black text-xl hover:bg-gray-100 transition-colors">
+          <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">REZERVĂ O LECȚIE DE PROBĂ</a>
+        </button>
+        <button class="border-3 border-white text-white px-8 py-4 rounded-full font-black text-xl hover:bg-white/10 transition-colors">
+          <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">CONTACTEAZĂ UN CONSULTANT</a>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0040A1]/15 pt-20 pb-10 border-t-2 border-[#0040A1]">
+    <div class="container mx-auto px-6 lg:px-20">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 mb-20">
+        <!-- Brand Column -->
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <a href="index.html"><img src="Servicii/assets/logo.svg" alt="iSwim Logo" class="h-12 w-auto"></a>
+            <a href="index.html"><span class="text-[#0040A1] font-[Nunito] text-2xl font-black">iSwim</span></a>
+          </div>
+          <p class="text-base font-medium text-[#19191F]/80 mb-8 max-w-xs">
+            Alege înotul - un pas sigur pentru dezvoltarea copilului tău.
+          </p>
+          <div class="flex gap-4">
+            <a href="https://www.facebook.com/iSwimSchooll/" class="hover:opacity-70 transition-soft"><img src="Servicii/assets/IMG_23.svg" alt="Social" class="w-7 h-7"></a>
+            <a href="https://www.tiktok.com/@iswimschool" class="hover:opacity-70 transition-soft"><img src="Servicii/assets/IMG_24.svg" alt="Social" class="w-7 h-7"></a>
+            <a href="https://www.instagram.com/iswim_school/" class="hover:opacity-70 transition-soft"><img src="Servicii/assets/IMG_25.svg" alt="Social" class="w-7 h-7"></a>
+            <a href="https://t.me/iSwim_info" class="hover:opacity-70 transition-soft"><img src="Servicii/assets/IMG_26.svg" alt="Social" class="w-7 h-7"></a>
+            <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0" class="hover:opacity-70 transition-soft"><img src="Servicii/assets/IMG_27.svg" alt="Social" class="w-7 h-7"></a>
+          </div>
+        </div>
+
+        <!-- Navigation Column -->
+        <div>
+          <h4 class="text-black text-2xl font-black mb-8">Navigare</h4>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <img src="Servicii/assets/IMG_20.svg" alt="Arrow" class="w-3">
+              <a href="index.html" class="text-lg hover:text-[#0040A1] transition-soft">Acasă</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="Servicii/assets/IMG_20.svg" alt="Arrow" class="w-3">
+              <a href="servicii.html" class="text-lg hover:text-[#0040A1] transition-soft">Servicii</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="Servicii/assets/IMG_20.svg" alt="Arrow" class="w-3">
+              <a href="tarife.html" class="text-lg hover:text-[#0040A1] transition-soft">Tarife</a>
+            </li>
+            <li class="flex items-center gap-3">
+              <img src="Servicii/assets/IMG_20.svg" alt="Arrow" class="w-3">
+              <a href="contacte.html" class="text-lg hover:text-[#0040A1] transition-soft">Contacte</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div>
+          <h4 class="text-black text-2xl font-black mb-8">Contacte</h4>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <a href="https://maps.app.goo.gl/hyubg8hZn2QpqkkD6"><img src="Servicii/assets/IMG_21.svg" alt="Location" class="w-7 mt-1"></a>
+              <a href="https://maps.app.goo.gl/hyubg8hZn2QpqkkD6"><span class="text-lg">Stăuceni MD, Strada Calea Orheiului 130<br>Chișinău Arena</span></a>
+            </li>
+            <li class="flex items-center gap-4">
+              <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0"><img src="Servicii/assets/IMG_22.svg" alt="Phone" class="w-7"></a>
+              <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0"><span class="text-lg">+373 60 577 533</span></a>
+            </li>
+            <li class="flex items-center gap-4">
+              <a href="https://mail.google.com/mail/u/0/#inbox"><img src="Servicii/assets/IMG_28.svg" alt="Email" class="w-7"></a>
+              <a href="https://mail.google.com/mail/u/0/#inbox"><span class="text-lg">academyiSwim@gmail.com</span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-black/10">
+        <p class="text-sm font-bold text-black/70">
+          © 2026 Toate drepturile rezervate, S.R.L. “I SWIM ACADEMY”
+        </p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

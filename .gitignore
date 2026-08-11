@@ -1,0 +1,56 @@
+# ==============================
+# iSwim Academy Website
+# Git ignore rules
+# ==============================
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Windows Explorer
+ehthumbs.db
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# IDEs
+.idea/
+*.iml
+
+# Node.js / npm (if introduced later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Build / generated directories
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.vite/
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+*.bak
+*.swp
+*.swo
+
+# Local development files
+*.local
+
+# OS-generated archives
+*.zip
+*.rar
+*.7z
