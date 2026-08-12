@@ -16,6 +16,10 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       overflow-x: hidden;
+      html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+      }
     }
 
     h1, h2, h3, h4, h5, h6 {
@@ -89,7 +93,7 @@
 
     <!-- Meniu mobil (dropdown) -->
     <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-3 bg-white border border-[#0040A1] rounded-3xl shadow-lg flex flex-col items-center gap-8 py-6">
-      <a href="index.html" class="text-[#0040A1] font-extrabold">Acasă</a>
+      <a href="index.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Acasă</a>
       <a href="servicii.html" class="text-[#0040A1] font-bold">Servicii</a>
       <a href="tarife.html" class="text-[#0040A1] font-bold">Tarife</a>
       <a href="contacte.html" class="text-[#0040A1] font-bold">Contacte</a>
