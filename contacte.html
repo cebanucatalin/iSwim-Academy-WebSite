@@ -81,25 +81,60 @@
 <body class="bg-white">
 
   <!-- Header / Navigation -->
-  <header class="absolute top-6 left-0 right-0 z-50 px-4 md:px-10 lg:px-20">
-    <nav class="max-w-[1390px] mx-auto bg-white border border-[#0040A1] rounded-full px-6 py-3 flex items-center justify-between shadow-lg">
-      <div class="flex items-center gap-3">
-        <a href="index.html"><img src="Acasa/assets/logo.svg" alt="iSwim Logo" class="h-10 w-auto object-contain"></a>
-        <a href="index.html"><span class="text-[#0040A1] font-[Nunito] text-2xl font-black">iSwim</span></a>
-      </div>
-      
-      <div class="hidden md:flex items-center gap-8">
-        <a href="index.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Acasă</a>
-        <a href="servicii.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Servicii</a>
-        <a href="tarife.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Tarife</a>
-        <a href="contacte.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Contacte</a>
-      </div>
+<header class="absolute top-6 left-0 right-0 z-50 px-4 md:px-10 lg:px-20">
+  <nav class="max-w-[1390px] mx-auto bg-white border border-[#0040A1] rounded-full px-6 py-3 flex items-center justify-between shadow-lg relative">
+    <div class="flex items-center gap-3">
+      <a href="index.html"><img src="Acasa/assets/logo.svg" alt="iSwim Logo" class="h-10 w-auto object-contain"></a>
+      <a href="index.html"><span class="text-[#0040A1] font-[Nunito] text-2xl font-black">iSwim</span></a>
+    </div>
 
-        <button class="bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
-          <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0"> Contactează-ne</a>
+    <div class="hidden md:flex items-center gap-8">
+      <a href="index.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Acasă</a>
+      <a href="servicii.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Servicii</a>
+      <a href="contacte.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Contacte</a>
+    </div>
+
+    <button class="hidden md:block bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
+      <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Contactează-ne</a>
+    </button>
+
+    <!-- Buton hamburger, doar pe mobil -->
+    <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10" aria-label="Deschide meniul">
+      <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar1"></span>
+      <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar2"></span>
+      <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar3"></span>
+    </button>
+
+    <!-- Meniu mobil (dropdown) -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-3 bg-white border border-[#0040A1] rounded-3xl shadow-lg flex flex-col items-center gap-8 py-6">
+      <a href="index.html" class="text-[#0040A1] font-bold">Acasă</a>
+      <a href="servicii.html" class="text-[#0040A1] font-bold">Servicii</a>
+      <a href="contacte.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Contacte</a>
+      <button class="bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
+        <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Contactează-ne</a>
       </button>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+
+    // animație simplă de transformare în X
+    bar1.classList.toggle('rotate-45');
+    bar1.classList.toggle('translate-y-2');
+    bar2.classList.toggle('opacity-0');
+    bar3.classList.toggle('-rotate-45');
+    bar3.classList.toggle('-translate-y-2');
+  });
+</script>
 
   <!-- Hero Section -->
   <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -281,10 +316,6 @@
             <li class="flex items-center gap-3">
               <img src="Servicii/assets/IMG_20.svg" alt="Arrow" class="w-3">
               <a href="servicii.html" class="text-lg hover:text-[#0040A1] transition-soft">Servicii</a>
-            </li>
-            <li class="flex items-center gap-3">
-              <img src="Servicii/assets/IMG_20.svg" alt="Arrow" class="w-3">
-              <a href="tarife.html" class="text-lg hover:text-[#0040A1] transition-soft">Tarife</a>
             </li>
             <li class="flex items-center gap-3">
               <img src="Servicii/assets/IMG_20.svg" alt="Arrow" class="w-3">
