@@ -12,6 +12,8 @@
     <script src="Acasa/tailwindcss.js"></script>
     <script src="Acasa/iconify-icon.min.js"></script>
 
+    <link rel="icon" type="image/png" href="Acasa/assets/logo.svg">
+
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" type="text/css" rel="stylesheet">
@@ -73,109 +75,119 @@
   </head>
 
   <body class="bg-white">
+    <!-- Header -->
+    <header class="absolute top-6 left-0 right-0 z-50 px-4 md:px-10 lg:px-20">
 
-  <!-- Header -->
-<header class="absolute top-6 left-0 right-0 z-50 px-4 md:px-10 lg:px-20">
-  <nav class="max-w-[1390px] mx-auto bg-white border border-[#0040A1] rounded-full px-6 py-3 flex items-center justify-between shadow-lg relative">
-    <div class="flex items-center gap-3">
-      <a href="index.html"><img src="Acasa/assets/logo.svg" alt="iSwim Logo" class="h-10 w-auto object-contain"></a>
-      <a href="index.html"><span class="text-[#0040A1] font-[Nunito] text-2xl font-black">iSwim</span></a>
-    </div>
+      <nav class="max-w-[1390px] mx-auto bg-white border border-[#0040A1] rounded-full px-6 py-3 flex items-center justify-between shadow-lg relative">
 
-    <div class="hidden md:flex items-center gap-8">
-      <a href="index.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Acasă</a>
-      <a href="servicii.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Servicii</a>
-      <a href="contacte.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Contacte</a>
-    </div>
-
-    <button class="hidden md:block bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
-      <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Contactează-ne</a>
-    </button>
-
-    <!-- Buton hamburger, doar pe mobil -->
-    <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10" aria-label="Deschide meniul">
-      <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar1"></span>
-      <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar2"></span>
-      <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar3"></span>
-    </button>
-
-    <!-- Meniu mobil (dropdown) -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-3 bg-white border border-[#0040A1] rounded-3xl shadow-lg flex flex-col items-center gap-8 py-6">
-      <a href="index.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Acasă</a>
-      <a href="servicii.html" class="text-[#0040A1] font-bold">Servicii</a>
-      <a href="contacte.html" class="text-[#0040A1] font-bold">Contacte</a>
-      <button class="bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
-        <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Contactează-ne</a>
-      </button>
-    </div>
-  </nav>
-</header>
-
-<script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const bar1 = document.getElementById('bar1');
-  const bar2 = document.getElementById('bar2');
-  const bar3 = document.getElementById('bar3');
-
-  menuToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-
-    // animație simplă de transformare în X
-    bar1.classList.toggle('rotate-45');
-    bar1.classList.toggle('translate-y-2');
-    bar2.classList.toggle('opacity-0');
-    bar3.classList.toggle('-rotate-45');
-    bar3.classList.toggle('-translate-y-2');
-  });
-</script>
-
-  <!-- Hero Section -->
-  <section class="relative min-h-[100vh] flex items-center pt-24 overflow-hidden">
-    <!-- Background Image -->
-    <div class="absolute inset-0 z-0">
-      <img src="Acasa/assets/IMG_1.webp" alt="Hero Background" class="w-full h-full object-cover">
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-white/70 md:from-white md:via-white/60 md:to-transparent"></div>
-    </div>
-
-    <div class="container mx-auto px-4 md:px-10 lg:px-20 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
-      <div class="max-w-3xl flex flex-col items-center text-center mx-auto -mt-0 lg:mt-0 lg:items-start lg:text-left lg:mx-0">
-        <div class="inline-flex items-center gap-3 bg-[#0040A1]/10 backdrop-blur-xl border border-[#0040A1]/30 px-5 py-2 rounded-full mb-6 lg:mb-8">
-          <img src="Acasa/assets/IMG_5.svg" alt="Icon" class="w-6 h-6">
-          <span class="text-[#0040A1] font-bold">Academie de Înot pentru Copii</span>
+        <div class="flex items-center gap-3">
+          <a href="index.html"><img src="Acasa/assets/logo.svg" alt="iSwim Logo" class="h-10 w-auto object-contain"></a>
+          <a href="index.html"><span class="text-[#0040A1] font-[Nunito] text-2xl font-black">iSwim</span></a>
         </div>
 
-        <h1 class="text-2xl md:text-3xl lg:text-5xl mb-10 lg:mb-6">
-          <span class="text-[#0040A1]">Alege înotul – un pas sigur</span><br>
-          <span class="text-black">în dezvoltarea copilului tău.</span>
-        </h1>
-
-        <p class="text-base md:text-lg mb-8 max-w-2xl">
-          Academia noastră oferă lecții de înot premium, create special pentru copii, într-un mediu sigur, prietenos și motivant. Fiecare antrenament susține dezvoltarea armonioasă a copilului, atât fizic, cât și mental, prin activități adaptate vârstei și nivelului de pregătire.
-        </p>
-
-<div class="flex flex-col lg:flex-row justify-center lg:justify-start gap-4 mb-8">
-  <button class="bg-[#0040A1] text-white px-8 py-4 rounded-full font-extrabold text-lg md:text-xl btn-hover-effect w-full lg:w-auto">
-    <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Programează o lecție de probă</a>
-  </button>
-
-  <button class="bg-white/20 backdrop-blur-xl border border-[#0040A1] text-[#0040A1] px-8 py-4 rounded-full font-extrabold text-lg md:text-xl btn-hover-effect w-full lg:w-auto">
-    <a href="servicii.html" class="flex items-center justify-center gap-3">
-      Vezi Serviciile
-      <img src="Acasa/assets/IMG_6.svg" alt="Arrow" class="w-6 h-6">
-    </a>
-  </button>
-</div>
-
-        <div class="flex items-center justify-center lg:justify-start gap-4">
-          <div class="flex -space-x-3">
-            <img src="Acasa/assets/IMG_7.webp" alt="User" class="w-10 h-10 rounded-full border-2 border-white">
-            <img src="Acasa/assets/IMG_8.webp" alt="User" class="w-10 h-10 rounded-full border-2 border-white">
-            <img src="Acasa/assets/IMG_9.webp" alt="User" class="w-10 h-10 rounded-full border-2 border-white">
-          </div>
-          <p class="text-lg font-medium"><span class="text-black font-bold">500 +</span> <span class="opacity-50">înotători fericiți</span></p>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Acasă</a>
+          <a href="servicii.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Servicii</a>
+          <a href="contacte.html" class="text-[#0040A1] font-bold hover:opacity-70 transition-opacity">Contacte</a>
         </div>
+
+        <button class="hidden md:block bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
+          <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Contactează-ne</a>
+        </button>
+
+        <!-- Buton hamburger, doar pe mobil -->
+        <button id="menu-toggle" class="md:hidden flex flex-col justify-center items-center gap-1.5 w-10 h-10" aria-label="Deschide meniul">
+          <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar1"></span>
+          <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar2"></span>
+          <span class="block w-6 h-0.5 bg-[#0040A1] transition-all duration-300" id="bar3"></span>
+        </button>
+
+        <!-- Meniu mobil (dropdown) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 mt-3 bg-white border border-[#0040A1] rounded-3xl shadow-lg flex flex-col items-center gap-8 py-6">
+          <a href="index.html" class="text-[#0040A1] font-extrabold border-b-2 border-[#0040A1]">Acasă</a>
+          <a href="servicii.html" class="text-[#0040A1] font-bold">Servicii</a>
+          <a href="contacte.html" class="text-[#0040A1] font-bold">Contacte</a>
+
+          <button class="bg-[#0040A1] text-white px-6 py-2 rounded-full font-black text-lg btn-hover-effect">
+            <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Contactează-ne</a>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <script>
+
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const bar1 = document.getElementById('bar1');
+      const bar2 = document.getElementById('bar2');
+      const bar3 = document.getElementById('bar3');
+
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+
+        // animație simplă de transformare în X
+        bar1.classList.toggle('rotate-45');
+        bar1.classList.toggle('translate-y-2');
+        bar2.classList.toggle('opacity-0');
+        bar3.classList.toggle('-rotate-45');
+        bar3.classList.toggle('-translate-y-2');
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[100vh] flex items-center pt-24 md:pt-12 lg:pt-24 overflow-hidden">
+
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="Acasa/assets/IMG_1.webp" alt="Hero Background" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-white/70 lg:from-white lg:via-white/60 lg:to-transparent"></div>
       </div>
+
+      <div class="container mx-auto px-4 md:px-10 lg:px-20 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+
+        <div class="max-w-3xl flex flex-col items-center text-center mx-auto -mt-0 lg:mt-0 lg:items-start lg:text-left lg:mx-0">
+
+          <div class="inline-flex items-center gap-2 md:gap-3 bg-[#0040A1]/10 backdrop-blur-xl border border-[#0040A1]/30 px-4 py-2 md:px-5 md:py-2 rounded-full mb-6 lg:mb-8">
+            <img src="Acasa/assets/IMG_5.svg" alt="Icon" class="w-4 h-4 md:w-6 md:h-6">
+            <span class="text-[#0040A1] font-bold text-sm md:text-base">Academie de Înot pentru Copii</span>
+          </div>
+
+          <h1 class="text-2xl md:text-3xl lg:text-5xl mb-10 md:mb-14 lg:mb-6">
+            <span class="text-[#0040A1]">Alege înotul – un pas sigur</span><br>
+            <span class="text-black">în dezvoltarea copilului tău.</span>
+          </h1>
+
+          <p class="text-sm md:text-base lg:text-lg mb-8 max-w-2xl md:max-w-xl lg:max-w-2xl">
+            Academia noastră oferă lecții de înot premium, create special pentru copii, într-un mediu sigur, prietenos și motivant.
+            Fiecare antrenament susține dezvoltarea armonioasă a copilului, atât fizic, cât și mental, prin activități adaptate vârstei
+            și nivelului de pregătire.
+          </p>
+
+          <div class="flex flex-col lg:flex-row justify-center lg:justify-start gap-4 mb-8">
+
+            <button class="bg-[#0040A1] text-white px-7 py-4 md:px-8 md:py-4 rounded-full font-extrabold text-base md:text-xl btn-hover-effect w-full lg:w-auto">
+              <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Programează o lecție de probă</a>
+            </button>
+
+            <button class="bg-white/20 backdrop-blur-xl border border-[#0040A1] text-[#0040A1] px-7 py-3 md:px-8 md:py-4 rounded-full font-extrabold text-base md:text-xl btn-hover-effect w-full lg:w-auto">
+              <a href="servicii.html" class="flex items-center justify-center gap-3">Vezi Serviciile
+                <img src="Acasa/assets/IMG_6.svg" alt="Arrow" class="w-6 h-6">
+              </a>
+            </button>
+          </div>
+
+          <div class="flex items-center justify-center lg:justify-start gap-4 mb-10 md:mb-0">
+
+            <div class="flex -space-x-3">
+              <img src="Acasa/assets/IMG_7.webp" alt="User" class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white">
+              <img src="Acasa/assets/IMG_8.webp" alt="User" class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white">
+              <img src="Acasa/assets/IMG_9.webp" alt="User" class="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white">
+            </div>
+
+            <p class="text-base md:text-lg font-medium"><span class="text-black font-bold">500 +</span> <span class="opacity-75">înotători fericiți</span></p>
+          </div>
+        </div>
 
       <!-- Floating Cards (Desktop Only) -->
       <div class="hidden lg:block relative h-[600px]">
