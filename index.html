@@ -190,7 +190,7 @@
         </div>
 
         <!-- Floating Cards (Desktop Only) -->
-        <div class="hidden lg:block relative h-[600px]">
+        <div class="hidden min-[1350px]:block relative h-[600px]">
 
           <!-- Card 1 -->
           <div class="glass-card absolute top-0 right-10 p-4 rounded-2xl flex items-center gap-4 w-64">
@@ -295,7 +295,7 @@
     </section>
 
     <!-- Roadmap Section -->
-    <section class="hidden md:block py-16 border-t-2 border-[#0040A1]/50">
+    <section class="hidden min-[1350px]:block py-16 border-t-2 border-[#0040A1]/50">
 
       <div class="container mx-auto px-6 text-center">
 
@@ -305,7 +305,7 @@
         <div class="relative">
 
           <!-- SVG Path for Desktop -->
-          <svg class="hidden lg:block absolute top-1/2 left-0 w-full h-32 -translate-y-1/2 z-0" viewBox="0 0 1200 120" fill="none">
+          <svg class="hidden min-[1350px]:block absolute top-1/2 left-0 w-full h-32 -translate-y-1/2 z-0" viewBox="0 0 1200 120" fill="none">
             <path d="M0 60C150 60 150 10 300 10C450 10 450 110 600 110C750 110 750 10 900 10C1050 10 1050 60 1200 60" stroke="#0040A1" stroke-width="2" class="step-path" />
           </svg>
 
@@ -502,13 +502,17 @@
 
             <div class="flex flex-wrap gap-6">
 
-              <button class="bg-white text-[#0040A1] px-8 py-4 rounded-full font-extrabold text-base md:text-lg btn-hover-effect w-83 md:w-auto">
-                <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Programează o lecție de probă</a>
+              <button class="bg-white text-[#0040A1] px-8 py-4 rounded-full font-extrabold text-base md:text-lg btn-hover-effect w-83 md:flex-1 lg:flex-none lg:w-auto text-center mx-auto md:mx-0">
+                <a href="https://api.whatsapp.com/send/?phone=37360577533&text&type=phone_number&app_absent=0">Programează 
+                  <br class="hidden md:block lg:hidden">
+                  o lecție de probă
+                </a>
               </button>
 
-              <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-extrabold text-lg btn-hover-effect w-83 md:w-auto">
+              <button class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-extrabold text-lg btn-hover-effect w-83 md:flex-1 lg:flex-none lg:w-auto text-center mx-auto md:mx-0">
                 <a href="servicii.html">Vezi Serviciile Noastre</a>
               </button>
+
             </div>
           </div>
 
